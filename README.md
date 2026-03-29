@@ -98,3 +98,4 @@ Outputs are saved under `results/<SAVE>` as defined by `SOLVER.SAVE` in the data
 
 ## References
 [1] Nie, Z.; Zhang, H.; Jiang, H.; Liu, Y.; Huang, X.; Xu, F.; Fu, J.; Ren, Z.; Tian, Y.; Zhang, W.-B.; Chen, J. OmniESI: A Unified Framework for Enzyme-Substrate Interaction Prediction with Progressive Conditional Deep Learning. arXiv June 22, 2025. https://doi.org/10.48550/arXiv.2506.17963.
+[2] Liu, S., Wang, H., Liu, W., Lasenby, J., Guo, H. and Tang, J., 2021. Pre-training molecular graph representation with 3d geometry. arXiv preprint arXiv:2110.07728.
