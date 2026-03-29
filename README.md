@@ -1,16 +1,16 @@
-# TvTPPIMI
+# TvTPPIMI 😭
 
-## Introduction
+## Introduction 😇
 This repository contains the PyTorch implementation of TvTPPIMI, a boundary-aware deep learning framework for predicting protein–protein interaction (PPI) modulators using atom-level molecular representations, residue-level protein representations, and cross-modal interaction modeling.
 
-## Framework
+## Framework 😎
 ![TvTPPIMI Framework](figure/figure.jpg)
 
 
-## Acknowledgements
+## Acknowledgements 😍
 This implementation is inspired and partially based on earlier works [1].
 
-## Environment
+## Environment 😵
 
 The code was developed and tested under the following environment:
 
@@ -60,14 +60,14 @@ pip install rdkit
 ```
 
 
-## Data
+## Data 😐
 The `data` folder contains dataset folds:
 - `MC`: Modulator cold-start
 - `TC`: PPI-target cold-start
 - `PC`: Paired Cold-Start
 
 
-## Feature preparation
+## Feature preparation 🤔
 Protein ESM2 features:
 ```bash
 python tools/extract_esm2_csv.py \
@@ -85,7 +85,7 @@ python tools/extract_graphmvp.py \
   --device cpu
 ```
 
-## Reproduce results
+## Reproduce results 🙏
 Train with MC/TC/PC configs:
 ```bash
 python main.py --model configs/model/MC.yaml --data configs/data/MC.yaml
@@ -96,6 +96,6 @@ python main.py --model configs/model/PC.yaml --data configs/data/PC.yaml
 Outputs are saved under `results/<SAVE>` as defined by `SOLVER.SAVE` in the data config.
 
 
-## References
+## References 👍
 [1] Nie, Z.; Zhang, H.; Jiang, H.; Liu, Y.; Huang, X.; Xu, F.; Fu, J.; Ren, Z.; Tian, Y.; Zhang, W.-B.; Chen, J. OmniESI: A Unified Framework for Enzyme-Substrate Interaction Prediction with Progressive Conditional Deep Learning. arXiv June 22, 2025. https://doi.org/10.48550/arXiv.2506.17963.
 [2] Liu, S., Wang, H., Liu, W., Lasenby, J., Guo, H. and Tang, J., 2021. Pre-training molecular graph representation with 3d geometry. arXiv preprint arXiv:2110.07728.
