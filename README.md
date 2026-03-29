@@ -95,8 +95,6 @@ python main.py --model configs/model/PC.yaml --data configs/data/PC.yaml
 
 Outputs are saved under `results/<SAVE>` as defined by `SOLVER.SAVE` in the data config.
 
-## Cite
-TODO
 
 ## References
 [1] Nie, Z.; Zhang, H.; Jiang, H.; Liu, Y.; Huang, X.; Xu, F.; Fu, J.; Ren, Z.; Tian, Y.; Zhang, W.-B.; Chen, J. OmniESI: A Unified Framework for Enzyme-Substrate Interaction Prediction with Progressive Conditional Deep Learning. arXiv June 22, 2025. https://doi.org/10.48550/arXiv.2506.17963.
