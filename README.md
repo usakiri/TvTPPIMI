@@ -4,7 +4,7 @@
 This repository contains the PyTorch implementation of TvTPPIMI, a boundary-aware deep learning framework for predicting protein–protein interaction (PPI) modulators using atom-level molecular representations, residue-level protein representations, and cross-modal interaction modeling.
 
 ## Framework
-![TvTPPIMI Framework](figure/figure.tif)
+![TvTPPIMI Framework](figure/figure.jpg)
 
 
 ## Acknowledgements
