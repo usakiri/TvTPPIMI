@@ -1,0 +1,66 @@
+from yacs.config import CfgNode as CN
+
+_C = CN()
+
+# Modulator feature extractor 
+_C.MODULATOR = CN()
+_C.MODULATOR.EXTERNAL = True
+_C.MODULATOR.EXTERNAL_DIM = 300
+
+
+# Protein feature extractor 
+_C.PROTEIN = CN()
+_C.PROTEIN.EXTERNAL = True
+_C.PROTEIN.EXTERNAL_DIM = 1280
+_C.PROTEIN.STATIC_FEATURES = CN()
+_C.PROTEIN.STATIC_FEATURES.USE_ESM = True
+_C.PROTEIN.STATIC_FEATURES.ESM_DIM = 1280
+_C.PROTEIN.SEPARATOR = CN()
+_C.PROTEIN.SEPARATOR.ENABLED = True
+_C.PROTEIN.SEPARATOR.ADD_ENDPOINTS = True
+
+# MLP decoder
+_C.DECODER = CN()
+_C.DECODER.NAME = "MLP"
+_C.DECODER.IN_DIM = 128
+_C.DECODER.HIDDEN_DIM = 256
+_C.DECODER.OUT_DIM = 64
+_C.DECODER.BINARY = 1
+
+# SOLVER
+_C.SOLVER = CN()
+_C.SOLVER.MAX_EPOCH = 50
+_C.SOLVER.BATCH_SIZE = 16
+_C.SOLVER.NUM_WORKERS = 8
+_C.SOLVER.LR = 5e-5
+_C.SOLVER.SEED = [305]
+_C.SOLVER.DATA = ""
+_C.SOLVER.SAVE = ""
+_C.SOLVER.FOLD_INDEX = None
+_C.SOLVER.USE_L2_REGULARIZATION = False
+_C.SOLVER.L2_LAMBDA = 0.0
+
+_C.RESULT = CN()
+_C.RESULT.OUTPUT_DIR = './results'
+
+_C.BCFM = CN()
+_C.BCFM.DIM = 128
+_C.BCFM.DROP_RATE = 0.1
+
+_C.FFM = CN()
+_C.FFM.DIM = 128
+_C.FFM.NUM_HEAD = 4
+_C.FFM.DROP_RATE = 0.1
+
+_C.FEATURE = CN()
+_C.FEATURE.COMPOUND_DIR = "./data/features/compound_graphmvp"
+_C.FEATURE.COMPOUND_MAPPING = "./data/features/compound_graphmvp/index.csv"
+_C.FEATURE.PROTEIN_ESM_DIR = "./data/features/protein_esm2"
+
+_C.STAGE = CN()
+_C.STAGE.BCFM = False
+_C.STAGE.FFM = False
+_C.STAGE.NUM = 1
+
+def get_cfg_defaults():
+    return _C.clone()
