@@ -61,6 +61,8 @@ pip install rdkit
 
 
 ## Data 😐
+Download the dataset from Google Drive: https://drive.google.com/file/d/1flmfAEJiADykAy4ZXaXplLCI--92KIKj/view?usp=drive_link
+
 The `data` folder contains dataset folds:
 - `MC`: Modulator cold-start
 - `TC`: PPI-target cold-start
